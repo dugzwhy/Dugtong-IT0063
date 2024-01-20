@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Switch</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    #container {
+      width: 70%;
+      margin: auto;
+      border: 2px solid #000;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <img src="img.png" width="250px" height="250px"><br>
+    <h1 id="name">Laoren Keaghan Y. Dugtong</h1>
+    <p id="email">202211566@fit.edu.ph</p>
+    <p id="phone">+63 919 099 1971</p>
+    <p id="address">Commonwealth, Quezon City</p>
+    <hr id="hrr" color="#000000">
+    <h2 class="head" id="bg">Background</h2>
+    <ul>
+      <p id="item1">FEU Institute of Technology Student</p>
+      <p id="item2">BS IT Web and Mobile Application Major</p>
+      <p id="item3">Gamer</p>
+      <p id="item4">Programmer</p>
+      <p id="item5">Designer</p>
+      <button id="colorSwitch">Switch</button>
+      <script type="text/javascript">
+        var colors = ["#9E3131", "#26A69A", "#C0CA33", "#8D6E63", "#FFB300", "#4CAF50"];
+        var colors2 = ["#4CAF50", "#FFB300", "#8D6E63", "#C0CA33", "#26A69A", "#9E3131"];
+        var i = 0;
+
+        document.getElementById("colorSwitch").addEventListener("click", function () {
+          i = i < colors.length ? ++i : 0;
+          
+          document.querySelector("#container").style.backgroundColor = colors[i];
+          document.getElementById("name").style.color = colors2[i];
+          document.getElementById("email").style.color = colors2[i];
+          document.getElementById("phone").style.color = colors2[i];
+          document.getElementById("address").style.color = colors2[i];
+          document.getElementById("item1").style.color = colors2[i];
+          document.getElementById("item2").style.color = colors2[i];
+          document.getElementById("item3").style.color = colors2[i];
+          document.getElementById("item4").style.color = colors2[i];
+          document.getElementById("item5").style.color = colors2[i];
+          document.getElementById("bg").style.color = colors2[i];
+          document.getElementById("hrr").style.color = colors2[i];
+        });
+      </script>
+    </ul>
+  </div>
+</body>
+</html>
